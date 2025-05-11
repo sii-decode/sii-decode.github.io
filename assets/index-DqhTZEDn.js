@@ -10,20 +10,20 @@ var require_stdin = __commonJS({
         if (j && j.supports && j.supports("modulepreload")) return;
         for (const p of document.querySelectorAll('link[rel="modulepreload"]')) h(p);
         new MutationObserver((p) => {
-          for (const x of p) if (x.type === "childList") for (const w of x.addedNodes) w.tagName === "LINK" && w.rel === "modulepreload" && h(w);
+          for (const X of p) if (X.type === "childList") for (const w of X.addedNodes) w.tagName === "LINK" && w.rel === "modulepreload" && h(w);
         }).observe(document, {
           childList: true,
           subtree: true
         });
-        function X(p) {
-          const x = {};
-          return p.integrity && (x.integrity = p.integrity), p.referrerPolicy && (x.referrerPolicy = p.referrerPolicy), p.crossOrigin === "use-credentials" ? x.credentials = "include" : p.crossOrigin === "anonymous" ? x.credentials = "omit" : x.credentials = "same-origin", x;
+        function G(p) {
+          const X = {};
+          return p.integrity && (X.integrity = p.integrity), p.referrerPolicy && (X.referrerPolicy = p.referrerPolicy), p.crossOrigin === "use-credentials" ? X.credentials = "include" : p.crossOrigin === "anonymous" ? X.credentials = "omit" : X.credentials = "same-origin", X;
         }
         function h(p) {
           if (p.ep) return;
           p.ep = true;
-          const x = X(p);
-          fetch(p.href, x);
+          const X = G(p);
+          fetch(p.href, X);
         }
       })();
       var Pc = {
@@ -34,21 +34,21 @@ var require_stdin = __commonJS({
         if (Id) return ge;
         Id = 1;
         var A = Symbol.for("react.transitional.element"), j = Symbol.for("react.fragment");
-        function X(h, p, x) {
+        function G(h, p, X) {
           var w = null;
-          if (x !== void 0 && (w = "" + x), p.key !== void 0 && (w = "" + p.key), "key" in p) {
-            x = {};
-            for (var vl in p) vl !== "key" && (x[vl] = p[vl]);
-          } else x = p;
-          return p = x.ref, {
+          if (X !== void 0 && (w = "" + X), p.key !== void 0 && (w = "" + p.key), "key" in p) {
+            X = {};
+            for (var vl in p) vl !== "key" && (X[vl] = p[vl]);
+          } else X = p;
+          return p = X.ref, {
             $$typeof: A,
             type: h,
             key: w,
             ref: p !== void 0 ? p : null,
-            props: x
+            props: X
           };
         }
-        return ge.Fragment = j, ge.jsx = X, ge.jsxs = X, ge;
+        return ge.Fragment = j, ge.jsx = G, ge.jsxs = G, ge;
       }
       var Pd;
       function xo() {
@@ -61,7 +61,7 @@ var require_stdin = __commonJS({
       function Xo() {
         if (lv) return Z;
         lv = 1;
-        var A = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), X = Symbol.for("react.fragment"), h = Symbol.for("react.strict_mode"), p = Symbol.for("react.profiler"), x = Symbol.for("react.consumer"), w = Symbol.for("react.context"), vl = Symbol.for("react.forward_ref"), H = Symbol.for("react.suspense"), T = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), al = Symbol.iterator;
+        var A = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), G = Symbol.for("react.fragment"), h = Symbol.for("react.strict_mode"), p = Symbol.for("react.profiler"), X = Symbol.for("react.consumer"), w = Symbol.for("react.context"), vl = Symbol.for("react.forward_ref"), H = Symbol.for("react.suspense"), T = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), al = Symbol.iterator;
         function fl(s) {
           return s === null || typeof s != "object" ? null : (s = al && s[al] || s["@@iterator"], typeof s == "function" ? s : null);
         }
@@ -242,7 +242,7 @@ var require_stdin = __commonJS({
             if (!mt(s)) throw Error("React.Children.only expected to receive a single React element child.");
             return s;
           }
-        }, Z.Component = Gl, Z.Fragment = X, Z.Profiler = p, Z.PureComponent = At, Z.StrictMode = h, Z.Suspense = H, Z.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = W, Z.__COMPILER_RUNTIME = {
+        }, Z.Component = Gl, Z.Fragment = G, Z.Profiler = p, Z.PureComponent = At, Z.StrictMode = h, Z.Suspense = H, Z.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = W, Z.__COMPILER_RUNTIME = {
           __proto__: null,
           c: function(s) {
             return W.H.useMemoCache(s);
@@ -271,7 +271,7 @@ var require_stdin = __commonJS({
             Provider: null,
             Consumer: null
           }, s.Provider = s, s.Consumer = {
-            $$typeof: x,
+            $$typeof: X,
             _context: s
           }, s;
         }, Z.createElement = function(s, E, M) {
@@ -382,7 +382,7 @@ var require_stdin = __commonJS({
               else break l;
             }
           }
-          function X(S) {
+          function G(S) {
             return S.length === 0 ? null : S[0];
           }
           function h(S) {
@@ -404,9 +404,9 @@ var require_stdin = __commonJS({
             return B !== 0 ? B : S.id - O.id;
           }
           if (A.unstable_now = void 0, typeof performance == "object" && typeof performance.now == "function") {
-            var x = performance;
+            var X = performance;
             A.unstable_now = function() {
-              return x.now();
+              return X.now();
             };
           } else {
             var w = Date, vl = w.now();
@@ -416,17 +416,17 @@ var require_stdin = __commonJS({
           }
           var H = [], T = [], R = 1, al = null, fl = 3, pl = false, Yl = false, vt = false, Gl = false, yu = typeof setTimeout == "function" ? setTimeout : null, At = typeof clearTimeout == "function" ? clearTimeout : null, Dl = typeof setImmediate < "u" ? setImmediate : null;
           function yt(S) {
-            for (var O = X(T); O !== null; ) {
+            for (var O = G(T); O !== null; ) {
               if (O.callback === null) h(T);
               else if (O.startTime <= S) h(T), O.sortIndex = O.expirationTime, j(H, O);
               else break;
-              O = X(T);
+              O = G(T);
             }
           }
           function W(S) {
-            if (vt = false, yt(S), !Yl) if (X(H) !== null) Yl = true, Cl || (Cl = true, Ul());
+            if (vt = false, yt(S), !Yl) if (G(H) !== null) Yl = true, Cl || (Cl = true, Ul());
             else {
-              var O = X(T);
+              var O = G(T);
               O !== null && Rl(W, O.startTime - S);
             }
           }
@@ -445,7 +445,7 @@ var require_stdin = __commonJS({
                   var B = fl;
                   try {
                     t: {
-                      for (yt(S), al = X(H); al !== null && !(al.expirationTime > S && Yu()); ) {
+                      for (yt(S), al = G(H); al !== null && !(al.expirationTime > S && Yu()); ) {
                         var el = al.callback;
                         if (typeof el == "function") {
                           al.callback = null, fl = al.priorityLevel;
@@ -454,13 +454,13 @@ var require_stdin = __commonJS({
                             al.callback = s, yt(S), O = true;
                             break t;
                           }
-                          al === X(H) && h(H), yt(S);
+                          al === G(H) && h(H), yt(S);
                         } else h(H);
-                        al = X(H);
+                        al = G(H);
                       }
                       if (al !== null) O = true;
                       else {
-                        var E = X(T);
+                        var E = G(T);
                         E !== null && Rl(W, E.startTime - S), O = false;
                       }
                     }
@@ -560,7 +560,7 @@ var require_stdin = __commonJS({
               startTime: B,
               expirationTime: s,
               sortIndex: -1
-            }, B > el ? (S.sortIndex = B, j(T, S), X(H) === null && S === X(T) && (vt ? (At(Vl), Vl = -1) : vt = true, Rl(W, B - el))) : (S.sortIndex = s, j(H, S), Yl || pl || (Yl = true, Cl || (Cl = true, Ul()))), S;
+            }, B > el ? (S.sortIndex = B, j(T, S), G(H) === null && S === G(T) && (vt ? (At(Vl), Vl = -1) : vt = true, Rl(W, B - el))) : (S.sortIndex = s, j(H, S), Yl || pl || (Yl = true, Cl || (Cl = true, Ul()))), S;
           }, A.unstable_shouldYield = Yu, A.unstable_wrapCallback = function(S) {
             var O = fl;
             return function() {
@@ -595,26 +595,26 @@ var require_stdin = __commonJS({
           }
           return "Minified React error #" + H + "; visit " + T + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
         }
-        function X() {
+        function G() {
         }
         var h = {
           d: {
-            f: X,
+            f: G,
             r: function() {
               throw Error(j(522));
             },
-            D: X,
-            C: X,
-            L: X,
-            m: X,
-            X,
-            S: X,
-            M: X
+            D: G,
+            C: G,
+            L: G,
+            m: G,
+            X: G,
+            S: G,
+            M: G
           },
           p: 0,
           findDOMNode: null
         }, p = Symbol.for("react.portal");
-        function x(H, T, R) {
+        function X(H, T, R) {
           var al = 3 < arguments.length && arguments[3] !== void 0 ? arguments[3] : null;
           return {
             $$typeof: p,
@@ -632,7 +632,7 @@ var require_stdin = __commonJS({
         return ql.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = h, ql.createPortal = function(H, T) {
           var R = 2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : null;
           if (!T || T.nodeType !== 1 && T.nodeType !== 9 && T.nodeType !== 11) throw Error(j(299));
-          return x(H, T, null, R);
+          return X(H, T, null, R);
         }, ql.flushSync = function(H) {
           var T = w.T, R = h.p;
           try {
@@ -720,7 +720,7 @@ var require_stdin = __commonJS({
       function Vo() {
         if (fv) return Se;
         fv = 1;
-        var A = jo(), j = ni(), X = Co();
+        var A = jo(), j = ni(), G = Co();
         function h(l) {
           var t = "https://react.dev/errors/" + l;
           if (1 < arguments.length) {
@@ -732,7 +732,7 @@ var require_stdin = __commonJS({
         function p(l) {
           return !(!l || l.nodeType !== 1 && l.nodeType !== 9 && l.nodeType !== 11);
         }
-        function x(l) {
+        function X(l) {
           var t = l, u = l;
           if (l.alternate) for (; t.return; ) t = t.return;
           else {
@@ -751,12 +751,12 @@ var require_stdin = __commonJS({
           return null;
         }
         function vl(l) {
-          if (x(l) !== l) throw Error(h(188));
+          if (X(l) !== l) throw Error(h(188));
         }
         function H(l) {
           var t = l.alternate;
           if (!t) {
-            if (t = x(l), t === null) throw Error(h(188));
+            if (t = X(l), t === null) throw Error(h(188));
             return t !== l ? null : l;
           }
           for (var u = l, a = t; ; ) {
@@ -864,7 +864,7 @@ var require_stdin = __commonJS({
           }
           return null;
         }
-        var Rl = Array.isArray, S = j.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, O = X.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, B = {
+        var Rl = Array.isArray, S = j.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, O = G.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, B = {
           pending: false,
           data: null,
           method: null,
@@ -2967,21 +2967,21 @@ Error generating stack: ` + u.message + `
                   next: null
                 });
                 l: {
-                  var G = l, q = c;
+                  var x = l, q = c;
                   r = t;
                   var ul = u;
                   switch (q.tag) {
                     case 1:
-                      if (G = q.payload, typeof G == "function") {
-                        _ = G.call(ul, _, r);
+                      if (x = q.payload, typeof x == "function") {
+                        _ = x.call(ul, _, r);
                         break l;
                       }
-                      _ = G;
+                      _ = x;
                       break l;
                     case 3:
-                      G.flags = G.flags & -65537 | 128;
+                      x.flags = x.flags & -65537 | 128;
                     case 0:
-                      if (G = q.payload, r = typeof G == "function" ? G.call(ul, _, r) : G, r == null) break l;
+                      if (x = q.payload, r = typeof x == "function" ? x.call(ul, _, r) : x, r == null) break l;
                       _ = R({}, _, r);
                       break l;
                     case 2:
@@ -4044,7 +4044,7 @@ Error generating stack: ` + u.message + `
             }
             return null;
           }
-          function G(v, d, y, b) {
+          function x(v, d, y, b) {
             for (var D = null, V = null, U = d, Y = d = 0, Al = null; U !== null && Y < y.length; Y++) {
               U.index > Y ? (Al = U, U = null) : Al = U.sibling;
               var k = r(v, U, y[Y], b);
@@ -4128,7 +4128,7 @@ Error generating stack: ` + u.message + `
                 case Ll:
                   return D = y._init, y = D(y._payload), ul(v, d, y, b);
               }
-              if (Rl(y)) return G(v, d, y, b);
+              if (Rl(y)) return x(v, d, y, b);
               if (Ul(y)) {
                 if (D = Ul(y), typeof D != "function") throw Error(h(150));
                 return y = D.call(y), q(v, d, y, b);
@@ -5275,8 +5275,8 @@ Error generating stack: ` + u.message + `
                 if ((l & 1024) !== 0 && n !== null) {
                   l = void 0, u = t, e = n.memoizedProps, n = n.memoizedState, a = u.stateNode;
                   try {
-                    var G = Ru(u.type, e, u.elementType === u.type);
-                    l = a.getSnapshotBeforeUpdate(G, n), a.__reactInternalSnapshotBeforeUpdate = l;
+                    var x = Ru(u.type, e, u.elementType === u.type);
+                    l = a.getSnapshotBeforeUpdate(x, n), a.__reactInternalSnapshotBeforeUpdate = l;
                   } catch (q) {
                     nl(u, u.return, q);
                   }
@@ -6381,7 +6381,7 @@ Error generating stack: ` + u.message + `
                     else {
                       var _ = c.ownerDocument || document, r = _ && _.defaultView || window;
                       if (r.getSelection) {
-                        var m = r.getSelection(), G = c.textContent.length, q = Math.min(i.start, G), ul = i.end === void 0 ? q : Math.min(i.end, G);
+                        var m = r.getSelection(), x = c.textContent.length, q = Math.min(i.start, x), ul = i.end === void 0 ? q : Math.min(i.end, x);
                         !m.extend && q > ul && (f = ul, ul = q, q = f);
                         var v = Wi(c, q), d = Wi(c, ul);
                         if (v && d && (m.rangeCount !== 1 || m.anchorNode !== v.node || m.anchorOffset !== v.offset || m.focusNode !== d.node || m.focusOffset !== d.offset)) {
@@ -6783,7 +6783,7 @@ Error generating stack: ` + u.message + `
             l: {
               var r = as.get(l);
               if (r !== void 0) {
-                var m = pe, G = l;
+                var m = pe, x = l;
                 switch (l) {
                   case "keypress":
                     if (Ne(u) === 0) break l;
@@ -6792,10 +6792,10 @@ Error generating stack: ` + u.message + `
                     m = $v;
                     break;
                   case "focusin":
-                    G = "focus", m = nf;
+                    x = "focus", m = nf;
                     break;
                   case "focusout":
-                    G = "blur", m = nf;
+                    x = "blur", m = nf;
                     break;
                   case "beforeblur":
                   case "afterblur":
@@ -6870,7 +6870,7 @@ Error generating stack: ` + u.message + `
                   if (y = b.stateNode, b = b.tag, b !== 5 && b !== 26 && b !== 27 || y === null || v === null || (b = Oa(d, v), b != null && q.push(ce(d, b, y))), ul) break;
                   d = d.return;
                 }
-                0 < q.length && (r = new m(r, G, null, u, g), _.push({
+                0 < q.length && (r = new m(r, x, null, u, g), _.push({
                   event: r,
                   listeners: q
                 }));
@@ -6878,10 +6878,10 @@ Error generating stack: ` + u.message + `
             }
             if ((t & 7) === 0) {
               l: {
-                if (r = l === "mouseover" || l === "pointerover", m = l === "mouseout" || l === "pointerout", r && u !== In && (G = u.relatedTarget || u.fromElement) && (Gu(G) || G[Bu])) break l;
-                if ((m || r) && (r = g.window === g ? g : (r = g.ownerDocument) ? r.defaultView || r.parentWindow : window, m ? (G = u.relatedTarget || u.toElement, m = o, G = G ? Gu(G) : null, G !== null && (ul = x(G), q = G.tag, G !== ul || q !== 5 && q !== 27 && q !== 6) && (G = null)) : (m = null, G = o), m !== G)) {
-                  if (q = qi, b = "onMouseLeave", v = "onMouseEnter", d = "mouse", (l === "pointerout" || l === "pointerover") && (q = Yi, b = "onPointerLeave", v = "onPointerEnter", d = "pointer"), ul = m == null ? r : za(m), y = G == null ? r : za(G), r = new q(b, d + "leave", m, u, g), r.target = ul, r.relatedTarget = y, b = null, Gu(g) === o && (q = new q(v, d + "enter", G, u, g), q.target = y, q.relatedTarget = ul, b = q), ul = b, m && G) t: {
-                    for (q = m, v = G, d = 0, y = q; y; y = ma(y)) d++;
+                if (r = l === "mouseover" || l === "pointerover", m = l === "mouseout" || l === "pointerout", r && u !== In && (x = u.relatedTarget || u.fromElement) && (Gu(x) || x[Bu])) break l;
+                if ((m || r) && (r = g.window === g ? g : (r = g.ownerDocument) ? r.defaultView || r.parentWindow : window, m ? (x = u.relatedTarget || u.toElement, m = o, x = x ? Gu(x) : null, x !== null && (ul = X(x), q = x.tag, x !== ul || q !== 5 && q !== 27 && q !== 6) && (x = null)) : (m = null, x = o), m !== x)) {
+                  if (q = qi, b = "onMouseLeave", v = "onMouseEnter", d = "mouse", (l === "pointerout" || l === "pointerover") && (q = Yi, b = "onPointerLeave", v = "onPointerEnter", d = "pointer"), ul = m == null ? r : za(m), y = x == null ? r : za(x), r = new q(b, d + "leave", m, u, g), r.target = ul, r.relatedTarget = y, b = null, Gu(g) === o && (q = new q(v, d + "enter", x, u, g), q.target = y, q.relatedTarget = ul, b = q), ul = b, m && x) t: {
+                    for (q = m, v = x, d = 0, y = q; y; y = ma(y)) d++;
                     for (y = 0, b = v; b; b = ma(b)) y++;
                     for (; 0 < d - y; ) q = ma(q), d--;
                     for (; 0 < y - d; ) v = ma(v), y--;
@@ -6892,7 +6892,7 @@ Error generating stack: ` + u.message + `
                     q = null;
                   }
                   else q = null;
-                  m !== null && Ad(_, r, m, q, false), G !== null && ul !== null && Ad(_, ul, G, q, true);
+                  m !== null && Ad(_, r, m, q, false), x !== null && ul !== null && Ad(_, ul, x, q, true);
                 }
               }
               l: {
@@ -7491,12 +7491,12 @@ Error generating stack: ` + u.message + `
               zi(l, r, m);
               return;
             case "option":
-              for (var G in u) if (r = u[G], u.hasOwnProperty(G) && r != null && !a.hasOwnProperty(G)) switch (G) {
+              for (var x in u) if (r = u[x], u.hasOwnProperty(x) && r != null && !a.hasOwnProperty(x)) switch (x) {
                 case "selected":
                   l.selected = false;
                   break;
                 default:
-                  tl(l, t, G, null, a, r);
+                  tl(l, t, x, null, a, r);
               }
               for (i in a) if (r = a[i], m = u[i], a.hasOwnProperty(i) && r !== m && (r != null || m != null)) switch (i) {
                 case "selected":
@@ -8230,7 +8230,7 @@ Error generating stack: ` + u.message + `
         var Hn = null;
         function kc(l) {
           if (Hn = null, l = Gu(l), l !== null) {
-            var t = x(l);
+            var t = X(l);
             if (t === null) l = null;
             else {
               var u = t.tag;
@@ -8392,7 +8392,7 @@ Error generating stack: ` + u.message + `
         function Wd(l) {
           var t = Gu(l.target);
           if (t !== null) {
-            var u = x(t);
+            var u = X(t);
             if (u !== null) {
               if (t = u.tag, t === 13) {
                 if (t = w(u), t !== null) {
@@ -8555,27 +8555,27 @@ Error generating stack: ` + u.message + `
         return A(), ti.exports = Vo(), ti.exports;
       }
       var Ko = Lo();
-      const Jo = "/assets/sii_decode_bg-Gk9Xso9i.wasm", wo = async (A = {}, j) => {
-        let X;
+      const Jo = "/assets/sii_decode_bg-Cd1MBfSw.wasm", wo = async (A = {}, j) => {
+        let G;
         if (j.startsWith("data:")) {
           const h = j.replace(/^data:.*?base64,/, "");
           let p;
           if (typeof Buffer == "function" && typeof Buffer.from == "function") p = Buffer.from(h, "base64");
           else if (typeof atob == "function") {
-            const x = atob(h);
-            p = new Uint8Array(x.length);
-            for (let w = 0; w < x.length; w++) p[w] = x.charCodeAt(w);
+            const X = atob(h);
+            p = new Uint8Array(X.length);
+            for (let w = 0; w < X.length; w++) p[w] = X.charCodeAt(w);
           } else throw new Error("Cannot decode base64-encoded data URL");
-          X = await WebAssembly.instantiate(p, A);
+          G = await WebAssembly.instantiate(p, A);
         } else {
           const h = await fetch(j), p = h.headers.get("Content-Type") || "";
-          if ("instantiateStreaming" in WebAssembly && p.startsWith("application/wasm")) X = await WebAssembly.instantiateStreaming(h, A);
+          if ("instantiateStreaming" in WebAssembly && p.startsWith("application/wasm")) G = await WebAssembly.instantiateStreaming(h, A);
           else {
-            const x = await h.arrayBuffer();
-            X = await WebAssembly.instantiate(x, A);
+            const X = await h.arrayBuffer();
+            G = await WebAssembly.instantiate(X, A);
           }
         }
-        return X.instance.exports;
+        return G.instance.exports;
       };
       let vu;
       function Wo(A) {
@@ -8596,22 +8596,22 @@ Error generating stack: ` + u.message + `
       }
       let vv = 0;
       function ko(A, j) {
-        const X = j(A.length * 1, 1) >>> 0;
-        return sv().set(A, X / 1), vv = A.length, X;
+        const G = j(A.length * 1, 1) >>> 0;
+        return sv().set(A, G / 1), vv = A.length, G;
       }
       function Fo(A) {
         const j = vu.__wbindgen_export_0.get(A);
         return vu.__externref_table_dealloc(A), j;
       }
       function Io(A) {
-        let j, X;
+        let j, G;
         try {
-          const x = ko(A, vu.__wbindgen_malloc), w = vv, vl = vu.decode(x, w);
+          const X = ko(A, vu.__wbindgen_malloc), w = vv, vl = vu.decode(X, w);
           var h = vl[0], p = vl[1];
           if (vl[3]) throw h = 0, p = 0, Fo(vl[2]);
-          return j = h, X = p, dv(h, p);
+          return j = h, G = p, dv(h, p);
         } finally {
-          vu.__wbindgen_free(j, X, 1);
+          vu.__wbindgen_free(j, G, 1);
         }
       }
       function Po(A, j) {
@@ -8642,27 +8642,32 @@ Error generating stack: ` + u.message + `
       Wo(c1);
       yv();
       function i1() {
-        const [A, j] = be.useState(null), X = be.useRef(null), h = be.useRef(null), p = (x) => {
-          if (x.target.files && x.target.files.length > 0) {
-            const w = x.target.files[0];
-            j(w);
+        const [A, j] = be.useState(null), G = be.useRef(null), h = be.useRef(null), p = (X) => {
+          if (X.target.files && X.target.files.length > 0) {
+            const w = X.target.files[0];
+            G.current && (G.current.value = ""), h.current && (h.current.href !== "#" && URL.revokeObjectURL(h.current.href), h.current.href = "#"), j(w);
           }
         };
         return be.useEffect(() => {
           if (A) {
-            const x = new FileReader();
-            x.onload = (w) => {
+            const X = new FileReader();
+            X.onload = (w) => {
               var _a;
-              const vl = (_a = w.target) == null ? void 0 : _a.result, H = new Uint8Array(vl), T = Io(H);
-              if (X.current && (X.current.value = T), h.current) {
-                const R = new Blob([
-                  T
-                ], {
-                  type: "text/plain"
-                }), al = URL.createObjectURL(R);
-                h.current.href = al, h.current.download = A.name.replace(".sii", "-decoded.sii"), h.current.textContent = "Download";
+              const vl = (_a = w.target) == null ? void 0 : _a.result, H = new Uint8Array(vl);
+              try {
+                const T = Io(H);
+                if (G.current && (G.current.value = T), h.current) {
+                  const R = new Blob([
+                    T
+                  ], {
+                    type: "text/plain"
+                  }), al = URL.createObjectURL(R);
+                  h.current.href = al, h.current.download = A.name.replace(".sii", "-decoded.sii");
+                }
+              } catch (T) {
+                G.current && T instanceof Error && (G.current.value = T.toString());
               }
-            }, x.readAsArrayBuffer(A);
+            }, X.readAsArrayBuffer(A);
           }
         }, [
           A
@@ -8678,6 +8683,7 @@ Error generating stack: ` + u.message + `
               children: tt.jsx("input", {
                 type: "file",
                 id: "file",
+                "data-testid": "file-upload",
                 onChange: p
               })
             }),
@@ -8686,12 +8692,15 @@ Error generating stack: ` + u.message + `
               id: "output",
               rows: 20,
               cols: 50,
-              ref: X
+              ref: G,
+              "data-testid": "file-display",
+              readOnly: true
             }),
             tt.jsx("div", {
               children: tt.jsx("a", {
                 href: "#",
                 ref: h,
+                "data-testid": "file-download",
                 children: "Download"
               })
             }),
