@@ -7161,7 +7161,7 @@ function B1() {
 }
 var G1 = B1();
 function X1(M) {
-  return new Worker("/assets/decode.worker-D6YtLN4q.js", { type: "module", name: M == null ? void 0 : M.name });
+  return new Worker("/assets/decode.worker-MF2ogWNV.js", { type: "module", name: M == null ? void 0 : M.name });
 }
 function Q1() {
   const [M, cl] = du.useState(null), j = du.useRef(null), m = du.useRef(null), X = du.useRef(null);
