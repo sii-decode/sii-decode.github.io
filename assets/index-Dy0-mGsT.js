@@ -7390,7 +7390,7 @@ function l1() {
 }
 var t1 = l1();
 function u1(O) {
-  return new Worker("/assets/decode.worker-CB0c81Zv.js", { type: "module", name: O == null ? void 0 : O.name });
+  return new Worker("/assets/decode.worker-D6LfFh5L.js", { type: "module", name: O == null ? void 0 : O.name });
 }
 function a1() {
   const [O, sl] = ru.useState(null), X = ru.useRef(null), h = ru.useRef(null), B = ru.useRef(null);
