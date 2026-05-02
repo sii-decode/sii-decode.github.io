@@ -7390,7 +7390,7 @@ function to() {
 }
 var ao = to();
 function uo(A) {
-  return new Worker("/assets/decode.worker-UvgajGp5.js", { type: "module", name: A == null ? void 0 : A.name });
+  return new Worker("/assets/decode.worker-CcTEqtDN.js", { type: "module", name: A == null ? void 0 : A.name });
 }
 function eo() {
   const [A, j] = Zl.useState(null), [K, h] = Zl.useState(null), [X, k] = Zl.useState(() => window.location.hash === "#tracker" ? "tracker" : "decode"), [hl, Tl] = Zl.useState({ status: "idle", analysis: null, error: null }), D = Zl.useRef(null), T = Zl.useRef(null), x = Zl.useRef(null);
@@ -7420,7 +7420,7 @@ function eo() {
         D.current && (Dl.length > 1e5 ? D.current.value = Dl.slice(0, 1e5) + `
 
 ... (${(Dl.length / 1024 / 1024).toFixed(2)} MB total - download for full content)` : D.current.value = Dl), T.current && (T.current.href = pl, T.current.download = A.name.replace(".sii", "-decoded.sii"));
-      } else il.data.type === "error" && D.current && (D.current.value = `Error: ${il.data.message}`);
+      } else il.data.type === "decode-error" && D.current && (D.current.value = `Error: ${il.data.message}`);
     };
     J.addEventListener("message", gl);
     const Xl = new FileReader();
@@ -7443,7 +7443,7 @@ function eo() {
       } catch {
         Tl({ status: "error", analysis: null, error: "Tracker output could not be read." });
       }
-      else il.data.type === "error" && Tl({ status: "error", analysis: null, error: il.data.message });
+      else il.data.type === "analysis-error" && Tl({ status: "error", analysis: null, error: il.data.message });
     };
     J.addEventListener("message", gl);
     const Xl = new FileReader();
